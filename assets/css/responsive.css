@@ -1,0 +1,54 @@
+/* =========================================================
+   RESPONSIVE.CSS — Penyesuaian tambahan (mobile-first)
+   Basis semua file lain sudah mobile-first,
+   file ini menambah tampilan untuk layar tablet/desktop
+   ========================================================= */
+
+/* ----- Tablet ke atas (>= 600px) ----- */
+@media (min-width: 600px) {
+  :root {
+    --fs-4xl: 4.5rem;
+    --fs-3xl: 3.4rem;
+  }
+
+  .opening-page { padding: var(--sp-8); }
+
+  .page-shell {
+    margin: var(--sp-8) auto;
+    min-height: auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .hero { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+
+  .countdown { gap: var(--sp-3); }
+
+  .rsvp-summary .rs-num { font-size: var(--fs-2xl); }
+}
+
+/* ----- Desktop (>= 900px): beri konteks di sekeliling kartu ----- */
+@media (min-width: 900px) {
+  .invitation-page {
+    background: linear-gradient(160deg, var(--color-emerald-900), var(--color-emerald-700));
+    padding: var(--sp-10) 0;
+  }
+
+  .page-shell {
+    box-shadow: 0 40px 90px rgba(0,0,0,0.35);
+  }
+}
+
+/* ----- Layar sangat kecil (<= 340px): rapatkan sedikit ----- */
+@media (max-width: 340px) {
+  .cover-name { font-size: var(--fs-3xl); }
+  .arch-frame { width: 170px; height: 210px; }
+  .countdown .cd-num { font-size: var(--fs-lg); }
+}
+
+/* ----- Orientasi lanskap di HP (halaman cover tetap muat) ----- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .opening-page { align-items: flex-start; padding-top: var(--sp-6); }
+  .cover-card { padding: var(--sp-6) var(--sp-5); }
+  .cover-name { font-size: var(--fs-2xl); margin: var(--sp-2) 0 var(--sp-3); }
+}

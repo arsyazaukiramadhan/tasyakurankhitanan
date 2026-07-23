@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Undangan Khitanan Arsya</title>
+  <meta name="description" content="Undangan Khitanan/Sunatan Arsya, Putra Bapak Sadam & Ibu Zulfah" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=Berkshire+Swash&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/opening.css" />
+  <link rel="stylesheet" href="assets/css/invitation.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    /* Fallback: Berkshire Swash dipakai sebagai pengganti font script "Berkasih" */
+    :root {
+      --font-script: "Berkshire Swash", "Cormorant Garamond", cursive;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Audio ditaruh di luar kedua "view" supaya tetap ada & bisa lanjut main
+     walau tampilan berpindah dari cover ke isi undangan (tanpa reload halaman) -->
+  <audio id="bgAudio" loop preload="none">
+    <source src="assets/audio/backsound.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ======================================================
+     VIEW 1 — COVER / OPENING
+     ====================================================== -->
+  <div id="coverView" class="opening-page">
+
+    <div class="floaters" aria-hidden="true">
+      <div class="floater f1"><svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 1 0 8.66 15c-4.5 1-8.66-2.5-8.66-7.5S16.16 2.9 20.66 3.9A10 10 0 0 0 12 2z" />
+        </svg></div>
+      <div class="floater f2"><svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
+        </svg></div>
+      <div class="floater f3"><svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
+        </svg></div>
+      <div class="floater f4"><svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 1 0 8.66 15c-4.5 1-8.66-2.5-8.66-7.5S16.16 2.9 20.66 3.9A10 10 0 0 0 12 2z" />
+        </svg></div>
+      <div class="floater f5"><svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
+        </svg></div>
+    </div>
+
+    <main class="cover-card">
+      <span class="cover-corner tl" aria-hidden="true"></span>
+      <span class="cover-corner tr" aria-hidden="true"></span>
+      <span class="cover-corner bl" aria-hidden="true"></span>
+      <span class="cover-corner br" aria-hidden="true"></span>
+
+      <p class="cover-kicker" dir="rtl" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+      <p class="cover-eyebrow">Undangan Tasyakuran Khitan</p>
+
+      <p class="cover-invite-to">Kepada Yth.</p>
+      <p class="cover-guest-name" data-guest-name>Bapak/Ibu/Saudara/i</p>
+
+      <p class="cover-sub">Kami mengundang Bapak/Ibu/Saudara/i pada acara khitanan ananda</p>
+
+      <h1 class="cover-name">Arsya</h1>
+
+      <button type="button" id="openInvitationBtn" class="btn btn-primary cover-open-btn">
+        Buka Undangan
+      </button>
+    </main>
+  </div>
+
+  <!-- ======================================================
+     VIEW 2 — ISI UNDANGAN
+     Disembunyikan (hidden) sampai tombol "Buka Undangan" diklik.
+     Karena tetap 1 dokumen yang sama (tidak reload), audio.play()
+     yang dipanggil tepat saat klik akan selalu diizinkan browser.
+     ====================================================== -->
+  <div id="invitationView" class="invitation-page" hidden>
+
+    <button type="button" id="musicToggle" class="music-toggle paused" aria-label="Putar musik">
+      <svg class="icon-playing" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+      </svg>
+      <svg class="icon-paused" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+    </button>
+
+    <div class="page-shell">
+
+      <!-- ============ HERO ============ -->
+      <header class="hero">
+        <div class="floaters" aria-hidden="true">
+          <div class="floater f1"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
+            </svg></div>
+          <div class="floater f4"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2a10 10 0 1 0 8.66 15c-4.5 1-8.66-2.5-8.66-7.5S16.16 2.9 20.66 3.9A10 10 0 0 0 12 2z" />
+            </svg></div>
+        </div>
+
+        <p class="hero-eyebrow">Walimatul Khitan</p>
+
+        <div class="arch-frame">
+          <div class="arch-photo">
+            <!-- Ganti src di bawah dengan foto Arsya, contoh: assets/images/arsya.jpg -->
+            <img src="assets/images/arsya.png" alt="Foto Arsya" onerror="this.remove()" />
+          </div>
+        </div>
+
+        <h1 class="hero-title">Arsya</h1>
+        <p class="hero-desc">
+          Dengan memohon rahmat &amp; ridho Allah SWT, kami mengundang
+          <strong data-guest-name>Bapak/Ibu/Saudara/i</strong>
+          untuk hadir dalam acara tasyakuran khitan ananda kami.
+        </p>
+      </header>
+
+      <!-- ============ DOA / AYAT ============ -->
+      <section class="section text-center reveal">
+        <p class="eyebrow">Ayat Suci</p>
+        <p class="dua-arabic" lang="ar">
+          رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا
+        </p>
+        <p class="dua-translation">
+          "Ya Tuhan kami, anugerahkanlah kepada kami istri-istri kami dan keturunan kami
+          sebagai penyenang hati (kami), dan jadikanlah kami imam bagi orang-orang yang bertakwa."
+        </p>
+        <p class="dua-source">QS. Al-Furqan: 74</p>
+      </section>
+
+      <!-- ============ DETAIL ACARA ============ -->
+      <section class="section section--alt reveal">
+        <p class="eyebrow">Detail Acara</p>
+        <h2 class="section-title">Insya Allah akan dilaksanakan pada</h2>
+        <p class="section-lead">Merupakan suatu kehormatan &amp; kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+          berkenan hadir.</p>
+
+        <div class="card event-card">
+          <div class="info-row">
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M3 10h18M8 3v4M16 3v4" />
+              </svg>
+            </span>
+            <div>
+              <p class="info-label">Hari &amp; Tanggal</p>
+              <p class="info-value">Sabtu, 15 Agustus 2026</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.5 2" />
+              </svg>
+            </span>
+            <div>
+              <p class="info-label">Waktu</p>
+              <p class="info-value">09.00 WIB – Selesai</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+            </span>
+            <div>
+              <p class="info-label">Lokasi</p>
+              <p class="info-value">Lapangan Futsal<br>Jl. Raya Cibanteng No.141, Cibanteng,<br>Kec. Ciampea, Kabupaten
+                Bogor,<br>Jawa Barat 16620</p>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a class="btn btn-primary btn-block" href="https://maps.app.goo.gl/jsWGRs5ycHFyJ91dA" target="_blank"
+              rel="noopener">
+              Buka di Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ COUNTDOWN ============ -->
+      <section class="section text-center reveal">
+        <p class="eyebrow">Menuju Hari Bahagia</p>
+        <h2 class="section-title">Hitung Mundur</h2>
+
+        <div class="countdown-wrap">
+          <div class="countdown">
+            <div class="cd-item">
+              <div class="cd-num" id="cdDays">00</div>
+              <div class="cd-label">Hari</div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-num" id="cdHours">00</div>
+              <div class="cd-label">Jam</div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-num" id="cdMinutes">00</div>
+              <div class="cd-label">Menit</div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-num" id="cdSeconds">00</div>
+              <div class="cd-label">Detik</div>
+            </div>
+          </div>
+          <p class="countdown-caption" id="cdCaption">Sampai bertemu di hari bahagia Arsya!</p>
+        </div>
+      </section>
+
+      <!-- ============ AMPLOP DIGITAL ============ -->
+      <section class="section section--alt reveal">
+        <p class="eyebrow">Tanda Kasih</p>
+        <h2 class="section-title">QRIS</h2>
+
+        <p class="envelope-note">
+          Doa restu Bapak/Ibu/Saudara/i merupakan hadiah terindah bagi kami.
+          Apabila ingin memberikan tanda kasih untuk Arsya, dapat menggunakan
+          QRIS berikut.
+        </p>
+
+        <div class="envelope-list">
+          <div class="envelope-item">
+
+            <div class="ei-bank">Scan QRIS</div>
+
+            <img src="assets/images/qris.png" alt="QRIS" class="qris-image">
+
+            <div class="ei-number">
+              a.n. Sadam
+            </div>
+
+            <a href="assets/images/qris.png" download class="download-btn">
+              Simpan QRIS
+            </a>
+
+          </div>
+        </div>
+      </section>
+      
+      <!-- ============ FOOTER ============ -->
+      <footer class="site-footer">
+        <p class="footer-kicker" lang="ar" dir="rtl">جَزَاكُمُ اللَّهُ خَيْرًا</p>
+        <p class="footer-thanks">Terima Kasih</p>
+        <p class="footer-family">
+          Atas doa &amp; restu yang diberikan, kami keluarga besar<br />
+          Bapak Sadam &amp; Ibu Zulfah mengucapkan terima kasih.
+        </p>
+        <p class="footer-credit">Undangan Digital Khitanan Arsya &middot; 2026</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/opening.js"></script>
+  <script src="assets/js/invitation.js"></script>
+</body>
+
+</html>
