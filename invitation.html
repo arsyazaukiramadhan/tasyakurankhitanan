@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mengalihkan ke Undangan Arsya...</title>
+<!--
+  Sejak update terbaru, cover & isi undangan digabung menjadi satu
+  dokumen (index.html) agar musik latar bisa auto-play dengan andal
+  di semua browser. File ini disisakan sebagai pengalih otomatis,
+  untuk berjaga-jaga jika ada tautan lama yang mengarah ke
+  invitation.html secara langsung.
+-->
+<meta http-equiv="refresh" content="0; url=index.html" />
+<link rel="stylesheet" href="assets/css/variables.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<style>
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--sp-6);
+    background: var(--color-emerald-900);
+    color: var(--color-ivory);
+  }
+  a { color: var(--color-gold-300); text-decoration: underline; }
+</style>
+<script>
+  var target = "index.html" + window.location.search + "#invitation";
+  window.location.replace(target);
+</script>
+</head>
+<body>
+  <p>Mengalihkan ke undangan Arsya&hellip;<br />
+    Jika tidak otomatis, <a id="fallbackLink" href="index.html">klik di sini</a>.
+  </p>
+  <script>
+    document.getElementById("fallbackLink").href = "index.html" + window.location.search + "#invitation";
+  </script>
+</body>
+</html>

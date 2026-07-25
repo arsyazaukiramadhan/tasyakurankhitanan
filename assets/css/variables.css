@@ -1,0 +1,106 @@
+/* =========================================================
+   VARIABLES.CSS — Design Tokens
+   Tema: White & Silver Premium — minimalis, modern, elegan
+   Terinspirasi gaya Apple / Linear: putih bersih, aksen silver
+   metalik, dan graphite gelap untuk kontras pada section hero.
+   ========================================================= */
+
+:root {
+  /* ---- Palet Inti (White & Silver Premium) ---- */
+  --color-bg: #f8f9fb;          /* Background */
+  --color-surface: #ffffff;     /* Surface */
+  --color-silver-primary: #c5ccd6;   /* Primary Silver */
+  --color-silver-secondary: #aeb6c2; /* Secondary Silver */
+  --color-border: #e5e7eb;      /* Border */
+  --color-heading: #1f2937;     /* Heading */
+  --color-text: #4b5563;        /* Text */
+  --color-muted: #6b7280;       /* Muted */
+
+  /* ---- Graphite gelap (turunan Heading, untuk hero/cover/footer) ---- */
+  --color-graphite-950: #12161d;
+  --color-graphite-800: #1f2937;
+  --color-graphite-700: #2d3748;
+  --color-silver-tint-100: #eef1f5; /* panel/alt-section sangat terang */
+
+  /* ---- Alias token lama (nilai diganti, nama dipertahankan
+         agar seluruh file CSS/HTML/JS lain tetap kompatibel) ---- */
+  --color-emerald-900: var(--color-graphite-950);
+  --color-emerald-800: var(--color-heading);
+  --color-emerald-700: var(--color-graphite-700);
+  --color-emerald-600: var(--color-silver-secondary);
+  --color-emerald-100: var(--color-silver-tint-100);
+
+  --color-gold-700: var(--color-heading);          /* teks aksen tetap terbaca */
+  --color-gold-500: var(--color-silver-primary);    /* border & ornamen dekoratif */
+  --color-gold-300: var(--color-silver-secondary);  /* aksen terang di atas bg gelap */
+  --color-gold-100: var(--color-silver-tint-100);
+
+  --color-ivory: var(--color-bg);
+  --color-ivory-dark: var(--color-silver-tint-100);
+  --color-paper: var(--color-surface);
+
+  --color-ink: var(--color-heading);
+  --color-ink-soft: var(--color-text);
+  --color-white: #ffffff;
+
+  --color-rose: var(--color-silver-secondary);
+
+  /* ---- Alias Semantik ---- */
+  --bg-base: var(--color-bg);
+  --bg-panel: var(--color-surface);
+  --bg-dark: var(--color-graphite-950);
+  --text-main: var(--color-text);
+  --text-muted: var(--color-muted);
+  --text-on-dark: var(--color-bg);
+  --accent: var(--color-silver-primary);
+  --accent-strong: var(--color-heading);
+  --brand: var(--color-heading);
+  --brand-strong: var(--color-heading);
+
+  /* ---- Tipografi ---- */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-arabic: "Amiri", serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+  --font-script: "Berkasih", "Cormorant Garamond", cursive;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 4rem;
+
+  /* ---- Spasi (skala 4px) ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-8: 3rem;
+  --sp-10: 4rem;
+  --sp-12: 6rem;
+
+  /* ---- Radius & Bayangan ---- */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-full: 999px;
+
+  --shadow-soft: 0 8px 24px rgba(31, 41, 55, 0.08);
+  --shadow-card: 0 12px 32px rgba(31, 41, 55, 0.10);
+  --shadow-gold: 0 0 0 1px rgba(174, 182, 194, 0.35);
+
+  /* ---- Transisi ---- */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.25s;
+  --dur-med: 0.5s;
+  --dur-slow: 0.9s;
+
+  /* ---- Layout ---- */
+  --max-width: 480px; /* tampilan seperti kartu undangan di layar besar */
+}
