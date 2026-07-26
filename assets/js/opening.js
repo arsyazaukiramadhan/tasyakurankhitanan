@@ -10,51 +10,11 @@
 (function () {
   "use strict";
 
-  var nameGateView = document.getElementById("nameGateView");
   var coverView = document.getElementById("coverView");
   var invitationView = document.getElementById("invitationView");
-  var guestNameForm = document.getElementById("guestNameForm");
-  var guestNameInput = document.getElementById("guestNameInput");
   var openBtn = document.getElementById("openInvitationBtn");
   var audio = document.getElementById("bgAudio");
   var musicBtn = document.getElementById("musicToggle");
-
-  /* ---- Nama tamu: dari parameter URL (?to=Nama) ATAU dari form input ---- */
-  var params = new URLSearchParams(window.location.search);
-  var guestNameFromUrl = params.get("to");
-
-  function applyGuestName(rawName) {
-    var trimmed = rawName ? decodeURIComponent(rawName).trim() : "";
-    var guestDisplay = trimmed ? trimmed : "Bapak/Ibu/Saudara/i";
-    document.querySelectorAll("[data-guest-name]").forEach(function (el) {
-      el.textContent = guestDisplay;
-    });
-  }
-
-  function showCover() {
-    if (nameGateView) nameGateView.hidden = true;
-    if (coverView) coverView.hidden = false;
-  }
-
-  if (guestNameFromUrl) {
-    // Link sudah membawa nama (kompatibilitas format lama) → langsung ke cover
-    applyGuestName(guestNameFromUrl);
-    showCover();
-  } else if (guestNameForm) {
-    // Belum ada nama → minta diisi dulu lewat form
-    guestNameForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var typedName = guestNameInput ? guestNameInput.value : "";
-      if (guestNameInput && !typedName.trim()) {
-        guestNameInput.focus();
-        return;
-      }
-      applyGuestName(encodeURIComponent(typedName));
-      showCover();
-    });
-  } else {
-    showCover();
-  }
 
   function setMusicIcon(playing) {
     if (!musicBtn) return;
@@ -65,7 +25,6 @@
   function goToInvitation(playMusic) {
     if (!coverView || !invitationView) return;
 
-    if (nameGateView) nameGateView.hidden = true;
     coverView.hidden = true;
     invitationView.hidden = false;
     window.scrollTo(0, 0);
