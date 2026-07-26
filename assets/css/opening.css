@@ -115,36 +115,6 @@
   opacity: 0.6;
 }
 
-/* ---------- Gerbang isi nama tamu (name-gate) ---------- */
-.name-gate-lead {
-  margin-bottom: var(--sp-5);
-}
-
-.name-gate-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-}
-
-.name-gate-input {
-  width: 100%;
-  padding: var(--sp-3) var(--sp-5);
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-silver-primary);
-  background: var(--color-surface);
-  color: var(--color-heading);
-  font-family: var(--font-body);
-  font-size: var(--fs-sm);
-  text-align: center;
-  outline: none;
-  transition: border-color var(--dur-fast) var(--ease-soft), box-shadow var(--dur-fast) var(--ease-soft);
-}
-.name-gate-input::placeholder { color: var(--color-muted); }
-.name-gate-input:focus {
-  border-color: var(--color-silver-secondary);
-  box-shadow: 0 0 0 3px rgba(197, 204, 214, 0.35);
-}
-
 /* Ornamen bulan & bintang mengambang di background */
 .opening-page .floaters .floater svg { width: 100%; height: 100%; }
 .floater.f1 { top: 8%; left: 10%; width: 26px; height: 26px; animation-delay: 0s; }
