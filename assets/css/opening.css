@@ -73,7 +73,7 @@
 
 .cover-name {
   font-family: var(--font-script);
-  font-size: clamp(2rem, 7vw, var(--fs-4xl));
+  font-size: clamp(2rem, 5vw, var(--fs-4xl));
   color: var(--color-gold-300);
   margin: var(--sp-2) 0 var(--sp-5);
   line-height: 1.2;
