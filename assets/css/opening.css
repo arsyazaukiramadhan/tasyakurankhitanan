@@ -73,11 +73,11 @@
 
 .cover-name {
   font-family: var(--font-script);
-  font-size: var(--fs-4xl);
+  font-size: clamp(2rem, 7vw, var(--fs-4xl));
   color: var(--color-gold-300);
   margin: var(--sp-2) 0 var(--sp-5);
-  line-height: 1.15;
-  text-shadow: 0 4px 18px rgba(197,204,214,0.4);
+  line-height: 1.2;
+  text-shadow: 0 4px 18px rgba(197, 204, 214, 0.4);
 }
 
 .cover-invite-to {
