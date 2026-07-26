@@ -73,11 +73,18 @@
 
 .cover-name {
   font-family: var(--font-script);
-  font-size: clamp(2rem, 5vw, var(--fs-4xl));
-  color: var(--color-gold-300);
-  margin: var(--sp-2) 0 var(--sp-5);
-  line-height: 1.2;
-  text-shadow: 0 4px 18px rgba(197, 204, 214, 0.4);
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.cover-name small {
+  display: block;
+  margin-top: .5rem;
+  font-family: var(--font-body);
+  font-size: clamp(.9rem, 3vw, 1.2rem);
+  font-weight: 400;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .08em;
 }
 
 .cover-invite-to {
