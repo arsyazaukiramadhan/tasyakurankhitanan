@@ -60,7 +60,7 @@
 .hero .arch-frame { margin-bottom: var(--sp-5); }
 .hero-title {
   font-family: var(--font-script);
-  font-size: var(--fs-4l);
+  font-size: var(--fs-xl);
   color: var(--color-gold-300);
   margin: 0 0 var(--sp-2);
 }
