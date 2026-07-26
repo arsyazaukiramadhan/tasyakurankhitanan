@@ -36,64 +36,9 @@
   </audio>
 
   <!-- ======================================================
-     VIEW 0 — ISI NAMA TAMU
-     Tampil dulu sebelum cover, kecuali tautan sudah membawa
-     parameter ?to=Nama (kompatibilitas link lama tetap didukung).
-     ====================================================== -->
-  <div id="nameGateView" class="opening-page">
-
-    <div class="floaters" aria-hidden="true">
-      <div class="floater f1"><svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2a10 10 0 1 0 8.66 15c-4.5 1-8.66-2.5-8.66-7.5S16.16 2.9 20.66 3.9A10 10 0 0 0 12 2z" />
-        </svg></div>
-      <div class="floater f2"><svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
-        </svg></div>
-      <div class="floater f3"><svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
-        </svg></div>
-      <div class="floater f4"><svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2a10 10 0 1 0 8.66 15c-4.5 1-8.66-2.5-8.66-7.5S16.16 2.9 20.66 3.9A10 10 0 0 0 12 2z" />
-        </svg></div>
-      <div class="floater f5"><svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l1.8 5.6H20l-4.7 3.4 1.8 5.6L12 13.2 6.9 16.6l1.8-5.6L4 7.6h6.2z" />
-        </svg></div>
-    </div>
-
-    <main class="cover-card">
-      <span class="cover-corner tl" aria-hidden="true"></span>
-      <span class="cover-corner tr" aria-hidden="true"></span>
-      <span class="cover-corner bl" aria-hidden="true"></span>
-      <span class="cover-corner br" aria-hidden="true"></span>
-
-      <p class="cover-kicker" dir="rtl" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-
-      <p class="cover-eyebrow">Undangan Tasyakuran Khitan</p>
-
-      <p class="cover-sub name-gate-lead">Sebelum membuka undangan,<br />mohon isi nama Anda</p>
-
-      <form id="guestNameForm" class="name-gate-form" novalidate>
-        <label for="guestNameInput" class="visually-hidden">Nama Anda</label>
-        <input
-          type="text"
-          id="guestNameInput"
-          class="name-gate-input"
-          placeholder="Contoh: Muhamad Rafli Agustian"
-          autocomplete="name"
-          maxlength="60"
-          required
-        />
-        <button type="submit" class="btn btn-primary btn-block">
-          Lanjutkan
-        </button>
-      </form>
-    </main>
-  </div>
-
-  <!-- ======================================================
      VIEW 1 — COVER / OPENING
      ====================================================== -->
-  <div id="coverView" class="opening-page" hidden>
+  <div id="coverView" class="opening-page">
 
     <div class="floaters" aria-hidden="true">
       <div class="floater f1"><svg viewBox="0 0 24 24" fill="currentColor">
@@ -330,5 +275,4 @@
   <script src="assets/js/opening.js"></script>
   <script src="assets/js/invitation.js"></script>
 </body>
-
 </html>
